@@ -2,37 +2,37 @@ package com.hemebiotech.analytics;
 
 import java.io.*;
 
-public class AnalyticsCounter implements InterfaceAnalyseFile
+public class AnalyticsCounter implements InterfaceAnalyseFile, InterfaceWriteFile
 
 {
 
     public static int headCount = 0;	// initialize to 0
     public static int rashCount = 0;		// initialize to 0
     public static int pupilCount = 0;		// initialize to 0
-
     public static String line = "";
     public static String filename = "symptoms.txt";
 
 
     public static void main(String[] args) throws Exception
-
     {
+
     AnalyticsCounter analyticsCounter = new AnalyticsCounter();
     analyticsCounter.analyseFile(filename);
 
-    writeFile();
+    AnalyticsCounter analyticsCounter1 = new AnalyticsCounter();
+    analyticsCounter1.writeFile();
 
     }
 
-
-    public static void writeFile() throws IOException {
+    @Override
+    public void writeFile() throws IOException
+    {
         // next generate output
         FileWriter writer = new FileWriter ("result.out");
         writer.write("headache: " + headCount + "\n");
         writer.write("rash: " + rashCount + "\n");
         writer.write("dialated pupils: " + pupilCount + "\n");
         writer.close();
-
     }
 
     public static void log()
@@ -42,8 +42,8 @@ public class AnalyticsCounter implements InterfaceAnalyseFile
 
 
     @Override
-    public void analyseFile(String filename) throws IOException {
-
+    public void analyseFile(String filename) throws IOException
+    {
             // first get input
             BufferedReader reader = new BufferedReader (new FileReader(filename));
             String line = reader.readLine();
