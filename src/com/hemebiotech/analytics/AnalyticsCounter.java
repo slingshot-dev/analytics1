@@ -4,28 +4,32 @@ import java.io.*;
 
 public class AnalyticsCounter {
 
-    private static int headacheCount = 0;	// initialize to 0
+    private static int headCount = 0;	// initialize to 0
     private static int rashCount = 0;		// initialize to 0
     private static int pupilCount = 0;		// initialize to 0
 
     public static String line = "";
+    public static File filename;
 
 
-    public static void main(String args[]) throws Exception
+    public static void main(String[] args) throws Exception
 
     {
     analyseFile();
-    wrtieFile();
+    AnalyticsCounter analyticsCounter = new AnalyticsCounter();
+    analyticsCounter.
+    writeFile();
 
     }
 
-    public static void analyseFile() throws IOException {
+    @Override
+    public static void analyseFile(File filename) throws IOException {
         // first get input
         BufferedReader reader = new BufferedReader (new FileReader("symptoms.txt"));
         String line = reader.readLine();
 
         int i = 0;	// set i to 0
-        int headCount = 0;	// counts headaches
+
         while (line != null) {
             i++;	// increment i
             System.out.println("symptom from file: " + line);
@@ -45,10 +49,10 @@ public class AnalyticsCounter {
 
     }
 
-    public static void wrtieFile() throws IOException {
+    public static void writeFile() throws IOException {
         // next generate output
         FileWriter writer = new FileWriter ("result.out");
-        writer.write("headache: " + headacheCount + "\n");
+        writer.write("headache: " + headCount + "\n");
         writer.write("rash: " + rashCount + "\n");
         writer.write("dialated pupils: " + pupilCount + "\n");
         writer.close();
