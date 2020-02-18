@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbe98df9-ab51-479b-ae40-da5d927e2d8d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/AnalyticsCounter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/AnalyticsCounter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/InterfaceLog1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/InterfaceLog1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/InterfaceWriteFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/InterfaceWriteFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/WriteDataToFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/WriteDataToFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/InterfaceWriteFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/InterfaceWriteFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/WriteDataToFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/WriteDataToFile.java" afterDir="false" />
-    </list>
+    <list default="true" id="bbe98df9-ab51-479b-ae40-da5d927e2d8d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +77,7 @@
       <workItem from="1581771343158" duration="7530000" />
       <workItem from="1581779701497" duration="3029000" />
       <workItem from="1581933021574" duration="22051000" />
-      <workItem from="1582013537839" duration="9615000" />
+      <workItem from="1582013537839" duration="10449000" />
     </task>
     <servers />
   </component>
