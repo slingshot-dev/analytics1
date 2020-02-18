@@ -2,11 +2,12 @@
 
 ![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)
 
-Une petite description du projet
+Analyse d'un fichier Symptoms.txt fourni par les clients
 
 ## Pour commencer
-
-Entrez ici les instructions pour bien débuter avec votre projet...
+Instructions:
+- positionner le fichier symptoms.txt a la racine du projet
+- recuperer le fichier result.out a la racine du projet
 
 ### Pré-requis
 
@@ -18,11 +19,11 @@ Deplacer le repertoire Analytics n'importe ou sur le Disque
 
 ## Démarrage
 
-Dites comment faire pour lancer votre projet
+dans un terminal, lancer la commande : java analytics.java
 
 ## Fabriqué avec
 
-Java 8
+Java 8  
 IDE IntelliJ
 
 ## Versions
