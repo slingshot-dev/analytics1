@@ -1,4 +1,4 @@
-package com.hemebiotech.analytics;
+package com.hemebiotech.analytics.Interfaces;
 
 import java.util.Hashtable;
 import java.util.List;

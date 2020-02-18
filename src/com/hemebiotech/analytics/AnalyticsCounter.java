@@ -1,5 +1,13 @@
 package com.hemebiotech.analytics;
 
+import com.hemebiotech.analytics.Implements.AnalyseDataSymptoms;
+import com.hemebiotech.analytics.Implements.ReadSymptomDataFromFile;
+import com.hemebiotech.analytics.Implements.WriteDataToFile;
+import com.hemebiotech.analytics.Interfaces.ISymptomReader;
+import com.hemebiotech.analytics.Interfaces.InterfaceAnalyseDataSymptoms;
+import com.hemebiotech.analytics.Interfaces.InterfaceLog1;
+import com.hemebiotech.analytics.Interfaces.InterfaceWriteFile;
+
 import java.util.Hashtable;
 import java.util.List;
 
