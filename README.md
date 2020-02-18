@@ -31,7 +31,7 @@ IDE IntelliJ
 
 ## Auteurs
 
-* **Cyrille Guillet** _alias_ [@outout14](https://github.com/slingshot-dev)
+* **Cyrille Guillet**(https://github.com/slingshot-dev)
 
 
 ## License
