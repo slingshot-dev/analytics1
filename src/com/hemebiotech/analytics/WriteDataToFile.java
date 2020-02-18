@@ -1,7 +1,6 @@
 package com.hemebiotech.analytics;
 
 import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Hashtable;
 
 /** Instantiating a fileWriter to create the result.out file
@@ -12,8 +11,8 @@ import java.util.Hashtable;
 
 public class WriteDataToFile implements InterfaceWriteFile {
 
-
-    public static void writeFile(Hashtable<String, Long> resultAnalyse) {
+    @Override
+    public void writeFile(Hashtable<String, Long> resultAnalyse) {
 
         String line = "";
         String filename = "result.out";
