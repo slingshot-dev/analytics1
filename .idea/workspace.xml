@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbe98df9-ab51-479b-ae40-da5d927e2d8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/InterfaceWriteFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/AnalyseDataSymptoms.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/InterfaceAnalyseDataSymptoms.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/InterfaceLog1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/WriteDataToFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/AnalyticsCounter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/AnalyticsCounter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/InterfaceAnalyseFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/InterfaceWriteFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/InterfaceWriteFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result.out" beforeDir="false" afterPath="$PROJECT_DIR$/result.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/AnalyticsCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/AnalyticsCounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/ISymptomReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/ISymptomReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/InterfaceAnalyseFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/InterfaceWriteFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/InterfaceWriteFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/ReadSymptomDataFromFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/ReadSymptomDataFromFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -35,6 +46,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
@@ -75,7 +87,12 @@
       <updated>1581685513015</updated>
       <workItem from="1581685514428" duration="4292000" />
       <workItem from="1581698761218" duration="44000" />
-      <workItem from="1581698946830" duration="3404000" />
+      <workItem from="1581698946830" duration="4985000" />
+      <workItem from="1581761842468" duration="5344000" />
+      <workItem from="1581771343158" duration="7530000" />
+      <workItem from="1581779701497" duration="3029000" />
+      <workItem from="1581933021574" duration="22051000" />
+      <workItem from="1582013537839" duration="5510000" />
     </task>
     <servers />
   </component>
@@ -83,103 +100,70 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2612" y="454" width="578" height="383" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581698995399">
+    <state x="2613" y="403" width="524" height="479" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1581772763485">
+      <screen x="1920" y="120" width="1920" height="1080" />
+    </state>
+    <state x="2613" y="403" width="524" height="479" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581772763485" />
+    <state x="2612" y="454" width="578" height="383" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581765746488">
       <screen x="1920" y="120" width="1920" height="1080" />
     </state>
     <state x="692" y="322" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1581688759882" />
-    <state x="2612" y="454" width="578" height="383" key="#com.intellij.fileTypes.FileTypeChooser/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581698995399" />
-    <state x="2678" y="364" width="374" height="570" key="#com.intellij.ide.util.MemberChooser" timestamp="1581701579553">
+    <state x="2612" y="454" width="578" height="383" key="#com.intellij.fileTypes.FileTypeChooser/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581765746488" />
+    <state x="2678" y="364" width="374" height="570" key="#com.intellij.ide.util.MemberChooser" timestamp="1581954365041">
       <screen x="1920" y="120" width="1920" height="1080" />
     </state>
-    <state x="2678" y="364" width="374" height="570" key="#com.intellij.ide.util.MemberChooser/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581701579553" />
-    <state x="2603" y="401" width="524" height="495" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581701717601">
+    <state x="2678" y="364" width="374" height="570" key="#com.intellij.ide.util.MemberChooser/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581954365041" />
+    <state x="2603" y="401" width="524" height="495" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581771627780">
       <screen x="1920" y="120" width="1920" height="1080" />
     </state>
-    <state x="2603" y="401" width="524" height="495" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581701717601" />
-    <state width="1858" height="342" key="GridCell.Tab.0.bottom" timestamp="1581702353551">
+    <state x="2603" y="401" width="524" height="495" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581771627780" />
+    <state x="2663" y="403" width="424" height="479" key="FileChooserDialogImpl" timestamp="1581779809936">
       <screen x="1920" y="120" width="1920" height="1080" />
     </state>
+    <state x="2663" y="403" width="424" height="479" key="FileChooserDialogImpl/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581779809936" />
+    <state width="1637" height="210" key="GridCell.Tab.0.bottom" timestamp="1582021928471">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="210" key="GridCell.Tab.0.bottom/-1680.0.1680.1010/0.0.1680.1010@0.0.1680.1010" timestamp="1582021928471" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1581691127905" />
-    <state width="1858" height="342" key="GridCell.Tab.0.bottom/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581702353551" />
-    <state width="1858" height="342" key="GridCell.Tab.0.center" timestamp="1581702353551">
-      <screen x="1920" y="120" width="1920" height="1080" />
+    <state width="1878" height="217" key="GridCell.Tab.0.bottom/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581960879668" />
+    <state width="1637" height="210" key="GridCell.Tab.0.center" timestamp="1582021928471">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
+    <state width="1637" height="210" key="GridCell.Tab.0.center/-1680.0.1680.1010/0.0.1680.1010@0.0.1680.1010" timestamp="1582021928471" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1581691127905" />
-    <state width="1858" height="342" key="GridCell.Tab.0.center/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581702353551" />
-    <state width="1858" height="342" key="GridCell.Tab.0.left" timestamp="1581702353551">
-      <screen x="1920" y="120" width="1920" height="1080" />
+    <state width="1878" height="217" key="GridCell.Tab.0.center/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581960879668" />
+    <state width="1637" height="210" key="GridCell.Tab.0.left" timestamp="1582021928471">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
+    <state width="1637" height="210" key="GridCell.Tab.0.left/-1680.0.1680.1010/0.0.1680.1010@0.0.1680.1010" timestamp="1582021928471" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1581691127904" />
-    <state width="1858" height="342" key="GridCell.Tab.0.left/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581702353551" />
-    <state width="1858" height="342" key="GridCell.Tab.0.right" timestamp="1581702353551">
-      <screen x="1920" y="120" width="1920" height="1080" />
+    <state width="1878" height="217" key="GridCell.Tab.0.left/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581960879668" />
+    <state width="1637" height="210" key="GridCell.Tab.0.right" timestamp="1582021928471">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
+    <state width="1637" height="210" key="GridCell.Tab.0.right/-1680.0.1680.1010/0.0.1680.1010@0.0.1680.1010" timestamp="1582021928471" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1581691127905" />
-    <state width="1858" height="342" key="GridCell.Tab.0.right/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581702353551" />
-    <state width="1858" height="342" key="GridCell.Tab.1.bottom" timestamp="1581702353594">
+    <state width="1878" height="217" key="GridCell.Tab.0.right/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581960879668" />
+    <state width="1878" height="217" key="GridCell.Tab.1.bottom" timestamp="1581960879668">
       <screen x="1920" y="120" width="1920" height="1080" />
     </state>
-    <state width="1858" height="342" key="GridCell.Tab.1.bottom/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581702353594" />
-    <state width="1858" height="342" key="GridCell.Tab.1.center" timestamp="1581702353594">
+    <state width="1878" height="217" key="GridCell.Tab.1.bottom/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581960879668" />
+    <state width="1878" height="217" key="GridCell.Tab.1.center" timestamp="1581960879668">
       <screen x="1920" y="120" width="1920" height="1080" />
     </state>
-    <state width="1858" height="342" key="GridCell.Tab.1.center/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581702353594" />
-    <state width="1858" height="342" key="GridCell.Tab.1.left" timestamp="1581702353594">
+    <state width="1878" height="217" key="GridCell.Tab.1.center/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581960879668" />
+    <state width="1878" height="217" key="GridCell.Tab.1.left" timestamp="1581960879668">
       <screen x="1920" y="120" width="1920" height="1080" />
     </state>
-    <state width="1858" height="342" key="GridCell.Tab.1.left/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581702353594" />
-    <state width="1858" height="342" key="GridCell.Tab.1.right" timestamp="1581702353594">
+    <state width="1878" height="217" key="GridCell.Tab.1.left/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581960879668" />
+    <state width="1878" height="217" key="GridCell.Tab.1.right" timestamp="1581960879668">
       <screen x="1920" y="120" width="1920" height="1080" />
     </state>
-    <state width="1858" height="342" key="GridCell.Tab.1.right/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581702353594" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/hemebiotech/analytics/AnalyticsCounter.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/hemebiotech/analytics/AnalyticsCounter.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/hemebiotech/analytics/AnalyticsCounter.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/hemebiotech/analytics/AnalyticsCounter.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/hemebiotech/analytics/AnalyticsCounter.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/hemebiotech/analytics/AnalyticsCounter.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/hemebiotech/analytics/AnalyticsCounter.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/com/hemebiotech/analytics/AnalyticsCounter.java</url>
-          <line>28</line>
-          <properties class="com.hemebiotech.analytics.AnalyticsCounter" method="writeFile">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state width="1878" height="217" key="GridCell.Tab.1.right/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581960879668" />
+    <state x="2603" y="418" width="524" height="462" key="extract.method.dialog" timestamp="1581764840585">
+      <screen x="1920" y="120" width="1920" height="1080" />
+    </state>
+    <state x="2603" y="418" width="524" height="462" key="extract.method.dialog/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1581764840585" />
   </component>
 </project>

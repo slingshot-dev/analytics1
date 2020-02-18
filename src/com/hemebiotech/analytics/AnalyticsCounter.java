@@ -1,73 +1,44 @@
 package com.hemebiotech.analytics;
 
-import java.io.*;
+import java.util.Hashtable;
+import java.util.List;
 
-public class AnalyticsCounter implements InterfaceAnalyseFile, InterfaceWriteFile
+/** The Main Class to Analyse Clients Symptoms from a file called symptoms.txt
+ * This Class calls the 3 Methods from associated Interfaces
+ * @author C. Guillet
+ * @version 0.9
+ */
+
+
+public class AnalyticsCounter implements InterfaceLog1
+
+/**@param filepath Path of the File symptoms.txt
+ * @param resultReadSymptoms Stock result of the Method ReadSymptoms
+ * @param resultAnalyse Stock result of the Method AnalyseDataSymptoms
+  */
+
 
 {
-
-    public static int headCount = 0;	// initialize to 0
-    public static int rashCount = 0;		// initialize to 0
-    public static int pupilCount = 0;		// initialize to 0
-    public static String line = "";
-    public static String filename = "symptoms.txt";
+    public static String filepath = "symptoms.txt"; //declaration de la variable avec le chemin du fichier en dur :(
+    public static List<String> resultReadSymptoms;
+    public static Hashtable<String, Long> resultAnalyse;
 
 
-    public static void main(String[] args) throws Exception
+    public static void main(String[] args)
     {
+        // Lecture du fichier pour extraire l'ensemble des symptoms
+        ReadSymptomDataFromFile readSymptomDataFromFile = new ReadSymptomDataFromFile(filepath);
+        resultReadSymptoms = readSymptomDataFromFile.GetSymptoms();
+            InterfaceLog1.log(resultReadSymptoms);
 
-    AnalyticsCounter analyticsCounter = new AnalyticsCounter();
-    analyticsCounter.analyseFile(filename);
+        // Analyse des symptoms + tri + comptage des symptoms
+        AnalyseDataSymptoms analyseDataSymptoms = new AnalyseDataSymptoms();
+        resultAnalyse = analyseDataSymptoms.AnalyseSymptoms(resultReadSymptoms);
+            InterfaceLog1.logHashTable(resultAnalyse);
 
-    AnalyticsCounter analyticsCounter1 = new AnalyticsCounter();
-    analyticsCounter1.writeFile();
-
+        // Creation du fichier result.out avec l'analyse precedente.
+        WriteDataToFile writeDataToFile = new WriteDataToFile();
+        writeDataToFile.writeFile(resultAnalyse);
     }
-
-    @Override
-    public void writeFile() throws IOException
-    {
-        // next generate output
-        FileWriter writer = new FileWriter ("result.out");
-        writer.write("headache: " + headCount + "\n");
-        writer.write("rash: " + rashCount + "\n");
-        writer.write("dialated pupils: " + pupilCount + "\n");
-        writer.close();
-    }
-
-    public static void log()
-    {
-        System.out.println("symptom from file: " + line);
-    }
-
-
-    @Override
-    public void analyseFile(String filename) throws IOException
-    {
-            // first get input
-            BufferedReader reader = new BufferedReader (new FileReader(filename));
-            String line = reader.readLine();
-
-            int i = 0;	// set i to 0
-
-            while (line != null) {
-                i++;	// increment i
-                System.out.println("symptom from file: " + line);
-                if (line.equals("headache")) {
-                    headCount++;
-                    System.out.println("number of headaches: " + headCount);
-                }
-                else if (line.equals("rash")) {
-                    rashCount++;
-                }
-                else if (line.contains("pupils")) {
-                    pupilCount++;
-                }
-
-                line = reader.readLine();	// get another symptom
-            }
-        }
-
-
-    }
+}
 

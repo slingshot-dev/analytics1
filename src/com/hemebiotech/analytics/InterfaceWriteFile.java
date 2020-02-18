@@ -1,9 +1,14 @@
 package com.hemebiotech.analytics;
 
-import java.io.IOException;
+import java.util.Hashtable;
 
-public interface InterfaceWriteFile {
+/** Interface to write the output file
+ * Expects a Hastable of 2 types String and Long
+ * Returns nothing but creates the file locally
+ */
 
-    void writeFile() throws IOException;
-
+public interface InterfaceWriteFile
+{
+    static void writeFile(Hashtable<String, Long> result3) {
+    }
 }
