@@ -16,7 +16,7 @@ import java.util.Hashtable;
 public class WriteDataToFile implements InterfaceWriteFile {
 
     @Override
-    public void writeFile(Hashtable<String, Long> resultAnalyse) {
+    public Object writeFile(Hashtable<String, Long> resultAnalyse) {
 
         String line = "";
         String filename = "result.out";
@@ -26,15 +26,15 @@ public class WriteDataToFile implements InterfaceWriteFile {
 
             for (String key : resultAnalyse.keySet()) {
                 Long nombre = resultAnalyse.get(key);
-                InterfaceLog1.logMap(key, nombre);
+                /*InterfaceLog1.logMap(key, nombre);*/
                 line = ("[" + key + "] --> " + nombre);
                 writer.write(line + "\n");
             }
 
             writer.close();
-            InterfaceLog1.logTexte("Fichier créé");
         } catch (java.io.IOException e) {
             e.printStackTrace();
         }
+        return null;
     }
 }

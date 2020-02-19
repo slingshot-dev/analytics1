@@ -1,5 +1,6 @@
 package com.hemebiotech.analytics.Interfaces;
 
+import java.io.*;
 import java.util.Hashtable;
 import java.util.List;
 
@@ -11,50 +12,42 @@ import java.util.List;
 
 public interface InterfaceLog1 {
 
-    public boolean logLevel = false;
+    boolean logTrue = true;
+    int logLevel = 1;
 
-    static void log(List log) {
-        if (logLevel) {
+    static void log(List log) throws IOException {
+        if (logTrue && logLevel == 1)
+            System.out.println("Lecture des symptoms réalisée.");
+        else if (logTrue && logLevel == 2) {
             System.out.println(log);
-        } else {
+        }
+    }
+
+    static void logHashTable(Hashtable log) throws FileNotFoundException {
+        if (logTrue && logLevel == 1)
+            System.out.println("Analyse des Symptoms réalisée");
+        else if (logTrue && logLevel == 2) {
+            System.out.println(log);
+        }
+    }
+
+    static void logTexte(String log) {
+        if (logTrue && logLevel == 1)
+            System.out.println(log);
+        else if (logTrue && logLevel == 2) {
             System.out.println("");
         }
     }
 
-    static void logHashTable(Hashtable log) {
-        {
-            if (logLevel) {
-                System.out.println(log);
-            } else {
-                System.out.println("");
-            }
-        }
-
-
-    }
-
-    static void logTexte(String log) {
-        {
-            if (logLevel) {
-                System.out.println(log);
-            } else {
-                System.out.println("");
-            }
-        }
-
-
-    }
-
     static void logMap(String log1, long log2) {
         {
-            if (logLevel) {
+            if (logTrue && logLevel == 1)
+                System.out.println("Fichier result.out créé dans le repertoire projet");
+            else if (logTrue && logLevel == 2) {
                 System.out.println("[" + log1 + "] --> " + log2);
-            } else {
-                System.out.println("");
             }
+
         }
 
-
     }
-
 }

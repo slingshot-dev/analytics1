@@ -8,6 +8,7 @@ import com.hemebiotech.analytics.Interfaces.InterfaceAnalyseDataSymptoms;
 import com.hemebiotech.analytics.Interfaces.InterfaceLog1;
 import com.hemebiotech.analytics.Interfaces.InterfaceWriteFile;
 
+import java.io.IOException;
 import java.util.Hashtable;
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class AnalyticsCounter implements InterfaceLog1
     public static Hashtable<String, Long> resultAnalyse;
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // Lecture du fichier pour extraire l'ensemble des symptoms
         ISymptomReader iSymptomReader = new ReadSymptomDataFromFile(filepath);
         resultReadSymptoms = iSymptomReader.GetSymptoms();
@@ -48,6 +49,7 @@ public class AnalyticsCounter implements InterfaceLog1
         // Creation du fichier result.out avec l'analyse precedente.
         InterfaceWriteFile interfaceWriteFile = new WriteDataToFile();
         interfaceWriteFile.writeFile(resultAnalyse);
+        InterfaceLog1.logTexte("Fichier result.out créé dans le repertoire Projet");
 
         // Creation du fichier result.out avec l'analyse precedente.
         /*WriteDataToFile writeDataToFile = new WriteDataToFile(); // Instanciation via la Class. Quelle Methode est la meilleur ?

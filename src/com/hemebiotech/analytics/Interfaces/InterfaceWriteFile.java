@@ -9,5 +9,5 @@ import java.util.Hashtable;
  */
 
 public interface InterfaceWriteFile {
-    void writeFile(Hashtable<String, Long> result3);
+    Object writeFile(Hashtable<String, Long> result3);
 }
