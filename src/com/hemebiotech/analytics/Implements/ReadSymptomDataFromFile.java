@@ -23,7 +23,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
     }
 
     @Override
-    public List<String> GetSymptoms() {
+    public List<String> GetSymptoms() throws Exception5 {
         ArrayList<String> result = new ArrayList<String>();
 
         if (filepath != null) {
@@ -37,10 +37,11 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
                 }
                 reader.close();
             } catch (IOException e) {
-                e.printStackTrace();
-            }
+                /*e.printStackTrace();*/
+                System.err.println(e);
+             }
         }
-
+        if (result.isEmpty()) throw new Exception5();
         return result;
     }
 

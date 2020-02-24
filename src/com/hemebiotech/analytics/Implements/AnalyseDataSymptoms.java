@@ -20,20 +20,25 @@ public class AnalyseDataSymptoms implements InterfaceAnalyseDataSymptoms {
 
     @Override
     public Hashtable<String, Long> AnalyseSymptoms(List<String> resultReadSymptoms) {
-        // instanciation d'une Map pour grouper et comptabiliser les symptoms
-        Map<String, Long> counts = resultReadSymptoms.stream().collect(Collectors.groupingBy(e -> e, Collectors.counting())); // utilisation de Lambda pour...
 
-        // instanciation du Tableau h pour insertion des valeur K, V
+        // instanciation du Tableau h pour insertion des valeur K, V de la Map
         Hashtable<String, Long> h = new Hashtable<String, Long>();
 
-        // insertion des données dans le HashTable h
-        for (String key : counts.keySet()) {
-            Long nombre = counts.get(key);
-            /*System.out.println("[" + key + "] --> " + nombre);*/
+        try {
+            // instanciation d'une Map pour grouper et comptabiliser les symptoms
+            Map<String, Long> counts = resultReadSymptoms.stream().collect(Collectors.groupingBy(e -> e, Collectors.counting())); // utilisation de Lambda pour...
 
-            h.put(key, nombre);
+            // insertion des données dans le HashTable h
+            for (String key : counts.keySet()) {
+                Long nombre = counts.get(key);
+                /*System.out.println("[" + key + "] --> " + nombre);*/
+
+                h.put(key, nombre);
+            }
+
+        } catch (java.lang.NullPointerException e) {
+            System.err.println("Symptoms vide");
         }
-
         return h;
     }
 }

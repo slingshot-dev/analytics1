@@ -1,23 +1,21 @@
 package com.hemebiotech.analytics;
 
 import com.hemebiotech.analytics.Implements.AnalyseDataSymptoms;
+import com.hemebiotech.analytics.Implements.Exception5;
 import com.hemebiotech.analytics.Implements.ReadSymptomDataFromFile;
 import com.hemebiotech.analytics.Implements.WriteDataToFile;
 import com.hemebiotech.analytics.Interfaces.ISymptomReader;
 import com.hemebiotech.analytics.Interfaces.InterfaceAnalyseDataSymptoms;
 import com.hemebiotech.analytics.Interfaces.InterfaceLog1;
 import com.hemebiotech.analytics.Interfaces.InterfaceWriteFile;
-
 import java.io.IOException;
 import java.util.Hashtable;
 import java.util.List;
 
 /**
- * The Main Class to Analyse Clients Symptoms from a file called symptoms.txt
+ * The program to Analyse Clients Symptoms from a file called symptoms.txt
  * This Class calls the 3 Methods from associated Interfaces
  *
- * @author C. Guillet
- * @version 0.9
  */
 
 
@@ -35,10 +33,15 @@ public class AnalyticsCounter implements InterfaceLog1
     public static Hashtable<String, Long> resultAnalyse;
 
 
-    public static void main(String[] args) throws IOException {
-        // Lecture du fichier pour extraire l'ensemble des symptoms
+    public void Program() throws IOException {
+
+        // Lecture du fichier pour extraire l'ensemble des symptoms avec gestion d'une exception en cas de fichier inexistant
         ISymptomReader iSymptomReader = new ReadSymptomDataFromFile(filepath);
-        resultReadSymptoms = iSymptomReader.GetSymptoms();
+        try {
+            resultReadSymptoms = iSymptomReader.GetSymptoms();
+        } catch (Exception5 exception5) {
+            exception5.printStackTrace();
+        }
         InterfaceLog1.log(resultReadSymptoms);
 
         // Analyse des symptoms + tri + comptage des symptoms
