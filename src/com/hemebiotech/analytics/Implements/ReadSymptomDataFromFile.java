@@ -23,7 +23,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
     }
 
     @Override
-    public List<String> GetSymptoms() throws Exception5 {
+    public List<String> GetSymptoms() throws MesExceptions {
         ArrayList<String> result = new ArrayList<String>();
 
         if (filepath != null) {
@@ -41,7 +41,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
                 System.err.println(e);
              }
         }
-        if (result.isEmpty()) throw new Exception5();
+        if (result.isEmpty()) throw new MesExceptions();
         return result;
     }
 

@@ -1,6 +1,6 @@
 package com.hemebiotech.analytics.Interfaces;
 
-import com.hemebiotech.analytics.Implements.Exception5;
+import com.hemebiotech.analytics.Implements.MesExceptions;
 
 import java.util.List;
 
@@ -15,6 +15,6 @@ public interface ISymptomReader {
     /**
      * If no data is available, return an empty List
      */
-    List<String> GetSymptoms() throws Exception5;
+    List<String> GetSymptoms() throws MesExceptions;
 }
 

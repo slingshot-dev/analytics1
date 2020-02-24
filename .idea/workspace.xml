@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbe98df9-ab51-479b-ae40-da5d927e2d8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Implements/Exception5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Launcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symptoms.txtold" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/AnalyticsCounter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/AnalyticsCounter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/Implements/Exception5.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/Implements/ReadSymptomDataFromFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/Implements/ReadSymptomDataFromFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/Interfaces/ISymptomReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/Interfaces/ISymptomReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/Launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/Launcher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result.out" beforeDir="false" afterPath="$PROJECT_DIR$/result.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/AnalyticsCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/AnalyticsCounter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Implements/AnalyseDataSymptoms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Implements/AnalyseDataSymptoms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Implements/Exception5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Implements/MesExceptions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Implements/ReadSymptomDataFromFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Implements/ReadSymptomDataFromFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Interfaces/ISymptomReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Interfaces/ISymptomReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symptoms.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +105,7 @@
       <workItem from="1581685514428" duration="543000" />
       <workItem from="1582196654348" duration="187000" />
       <workItem from="1582215357099" duration="2945000" />
-      <workItem from="1582533141653" duration="8163000" />
+      <workItem from="1582533141653" duration="10229000" />
     </task>
     <servers />
   </component>
@@ -117,30 +120,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1582536664733" />
-    <state width="1877" height="277" key="GridCell.Tab.0.bottom" timestamp="1582544304442">
+    <state width="1877" height="234" key="GridCell.Tab.0.bottom" timestamp="1582546154508">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1582536703478" />
     <state width="1557" height="348" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1582536869662" />
-    <state width="1877" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1582544304442" />
-    <state width="1877" height="277" key="GridCell.Tab.0.center" timestamp="1582544304441">
+    <state width="1877" height="234" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1582546154508" />
+    <state width="1877" height="234" key="GridCell.Tab.0.center" timestamp="1582546154508">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1582536703478" />
     <state width="1557" height="348" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1582536869661" />
-    <state width="1877" height="277" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1582544304441" />
-    <state width="1877" height="277" key="GridCell.Tab.0.left" timestamp="1582544304441">
+    <state width="1877" height="234" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1582546154508" />
+    <state width="1877" height="234" key="GridCell.Tab.0.left" timestamp="1582546154508">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1582536703478" />
     <state width="1557" height="348" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1582536869661" />
-    <state width="1877" height="277" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1582544304441" />
-    <state width="1877" height="277" key="GridCell.Tab.0.right" timestamp="1582544304442">
+    <state width="1877" height="234" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1582546154508" />
+    <state width="1877" height="234" key="GridCell.Tab.0.right" timestamp="1582546154508">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1582536703478" />
     <state width="1557" height="348" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1582536869661" />
-    <state width="1877" height="277" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1582544304442" />
+    <state width="1877" height="234" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1582546154508" />
     <state width="1877" height="103" key="GridCell.Tab.1.bottom" timestamp="1582544006403">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
