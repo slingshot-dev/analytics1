@@ -8,8 +8,8 @@ import java.util.List;
  * ..and returns a HashTable of 2 types, String and Long.
  */
 
-public interface InterfaceAnalyseDataSymptoms {
+public interface IAnalyserDataSymptoms {
 
-    Hashtable<String, Long> AnalyseSymptoms(List<String> resultReadSymptoms);
+    Hashtable<String, Long> analyseSymptoms(List<String> resultReadSymptoms);
 
 }

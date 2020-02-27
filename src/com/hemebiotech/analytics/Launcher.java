@@ -1,5 +1,7 @@
 package com.hemebiotech.analytics;
 
+import com.hemebiotech.analytics.Implements.MesExceptions;
+
 import java.io.IOException;
 
 
@@ -11,14 +13,17 @@ import java.io.IOException;
  */
 
 
-public class Launcher
+public class Launcher {
+    public static String fileout;
 
-{
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, MesExceptions {
+
+        fileout = args[1];
 
         AnalyticsCounter analyticsCounter = new AnalyticsCounter();
-        analyticsCounter.Program();
-
+        analyticsCounter.reader(args[0]);
+        analyticsCounter.analyser();
+        analyticsCounter.writer();
     }
 }

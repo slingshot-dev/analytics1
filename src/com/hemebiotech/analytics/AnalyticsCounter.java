@@ -1,15 +1,13 @@
 package com.hemebiotech.analytics;
 
-import com.hemebiotech.analytics.Implements.AnalyseDataSymptoms;
+import com.hemebiotech.analytics.Implements.AnalyserDataSymptoms;
 import com.hemebiotech.analytics.Implements.MesExceptions;
-import com.hemebiotech.analytics.Implements.ReadSymptomDataFromFile;
-import com.hemebiotech.analytics.Implements.WriteDataToFile;
+import com.hemebiotech.analytics.Implements.ReaderSymptomDataFromFile;
+import com.hemebiotech.analytics.Implements.WriterDataToFile;
 import com.hemebiotech.analytics.Interfaces.ISymptomReader;
-import com.hemebiotech.analytics.Interfaces.InterfaceAnalyseDataSymptoms;
-import com.hemebiotech.analytics.Interfaces.InterfaceLog1;
-import com.hemebiotech.analytics.Interfaces.InterfaceWriteFile;
+import com.hemebiotech.analytics.Interfaces.IAnalyserDataSymptoms;
+import com.hemebiotech.analytics.Interfaces.IWriterFile;
 
-import java.io.IOException;
 import java.util.Hashtable;
 import java.util.List;
 
@@ -19,7 +17,7 @@ import java.util.List;
  */
 
 
-public class AnalyticsCounter implements InterfaceLog1
+public class AnalyticsCounter
 
 /**@param filepath Path of the File symptoms.txt
  * @param resultReadSymptoms Stock result of the Method ReadSymptoms
@@ -28,36 +26,30 @@ public class AnalyticsCounter implements InterfaceLog1
 
 
 {
-    public static String filepath = "symptoms.txt"; //declaration de la variable avec le chemin du fichier en dur :(
     public static List<String> resultReadSymptoms;
     public static Hashtable<String, Long> resultAnalyse;
 
 
-    public void Program() throws IOException {
+    public void reader(String arg) throws MesExceptions {    // Lecture du fichier pour extraire l'ensemble des symptoms avec gestion d'une exception en cas de fichier inexistant
+        ISymptomReader iSymptomReader = new ReaderSymptomDataFromFile(); //
+        resultReadSymptoms = iSymptomReader.getSymptoms(arg);
+    }
 
-        // Lecture du fichier pour extraire l'ensemble des symptoms avec gestion d'une exception en cas de fichier inexistant
-        ISymptomReader iSymptomReader = new ReadSymptomDataFromFile(filepath);
-        try {
-            resultReadSymptoms = iSymptomReader.GetSymptoms();
-        } catch (MesExceptions exceptions) {
-            exceptions.printStackTrace();
+    public void analyser() {    // Analyse des symptoms + tri + comptage des symptoms
+        IAnalyserDataSymptoms IAnalyserDataSymptoms = new AnalyserDataSymptoms();
+        resultAnalyse = IAnalyserDataSymptoms.analyseSymptoms(resultReadSymptoms);
+    }
+
+    public void writer() {      // Creation du fichier result.out avec l'analyse precedente.
+        IWriterFile IWriterFile = new WriterDataToFile();
+        boolean result = IWriterFile.writeFile(resultAnalyse);
+
+        if (!result) {
+            System.out.println("Probleme");
         }
-        InterfaceLog1.log(resultReadSymptoms);
-
-        // Analyse des symptoms + tri + comptage des symptoms
-        InterfaceAnalyseDataSymptoms interfaceAnalyseDataSymptoms = new AnalyseDataSymptoms();
-        resultAnalyse = interfaceAnalyseDataSymptoms.AnalyseSymptoms(resultReadSymptoms);
-        InterfaceLog1.logHashTable(resultAnalyse);
-
-        // Creation du fichier result.out avec l'analyse precedente.
-        InterfaceWriteFile interfaceWriteFile = new WriteDataToFile();
-        interfaceWriteFile.writeFile(resultAnalyse);
-        InterfaceLog1.logTexte("Fichier result.out créé dans le repertoire Projet");
-
-        // Creation du fichier result.out avec l'analyse precedente.
-        /*WriteDataToFile writeDataToFile = new WriteDataToFile(); // Instanciation via la Class. Quelle Methode est la meilleur ?
-        writeDataToFile.writeFile(resultAnalyse);*/
 
     }
 }
+
+
 

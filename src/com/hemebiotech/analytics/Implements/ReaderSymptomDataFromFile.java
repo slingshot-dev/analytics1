@@ -11,19 +11,17 @@ import java.util.List;
 /**
  * Simple brute force implementation
  */
-public class ReadSymptomDataFromFile implements ISymptomReader {
+public class ReaderSymptomDataFromFile implements ISymptomReader {
 
-    private String filepath;
+    //private String filepath;
 
     /**
-     * @param filepath a full or partial path to file with symptom strings in it, one per line
+ //    * @param filepath a full or partial path to file with symptom strings in it, one per line
      */
-    public ReadSymptomDataFromFile(String filepath) {
-        this.filepath = filepath;
-    }
+    //public ReaderSymptomDataFromFile(String filepath) {this.filepath = filepath;}
 
     @Override
-    public List<String> GetSymptoms() throws MesExceptions {
+    public List<String> getSymptoms(String filepath) throws MesExceptions {
         ArrayList<String> result = new ArrayList<String>();
 
         if (filepath != null) {
@@ -31,17 +29,20 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
                 BufferedReader reader = new BufferedReader(new FileReader(filepath));
                 String line = reader.readLine();
 
+                if(line == null){throw new MesExceptions("Fichier "+filepath+" vide");}
+
                 while (line != null) {
                     result.add(line);
                     line = reader.readLine();
                 }
                 reader.close();
-            } catch (IOException e) {
-                /*e.printStackTrace();*/
-                System.err.println(e);
+            }
+            catch (IOException e) {
+                System.err.println("Fichier "+filepath+" introuvable");
+                System.exit(1);
              }
         }
-        if (result.isEmpty()) throw new MesExceptions();
+        System.out.println("Fichier Symptoms.txt lu avec succès");
         return result;
     }
 

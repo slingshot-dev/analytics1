@@ -15,6 +15,6 @@ public interface ISymptomReader {
     /**
      * If no data is available, return an empty List
      */
-    List<String> GetSymptoms() throws MesExceptions;
+    List<String> getSymptoms(String filepath) throws MesExceptions;
 }
 

@@ -8,6 +8,6 @@ import java.util.Hashtable;
  * Returns nothing but creates the file locally
  */
 
-public interface InterfaceWriteFile {
-    Object writeFile(Hashtable<String, Long> result3);
+public interface IWriterFile {
+    boolean writeFile(Hashtable<String, Long> result3);
 }
