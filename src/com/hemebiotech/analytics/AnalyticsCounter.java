@@ -7,7 +7,6 @@ import com.hemebiotech.analytics.Implements.WriterDataToFile;
 import com.hemebiotech.analytics.Interfaces.ISymptomReader;
 import com.hemebiotech.analytics.Interfaces.IAnalyserDataSymptoms;
 import com.hemebiotech.analytics.Interfaces.IWriterFile;
-
 import java.util.Hashtable;
 import java.util.List;
 
@@ -29,18 +28,18 @@ public class AnalyticsCounter
     public static List<String> resultReadSymptoms;
     public static Hashtable<String, Long> resultAnalyse;
 
-
-    public void reader(String arg) throws MesExceptions {    // Lecture du fichier pour extraire l'ensemble des symptoms avec gestion d'une exception en cas de fichier inexistant
+    /** Lecture du fichier pour extraire l'ensemble des symptoms avec gestion d'une exception en cas de fichier inexistant **/
+    public void reader(String arg) throws MesExceptions {
         ISymptomReader iSymptomReader = new ReaderSymptomDataFromFile(); //
         resultReadSymptoms = iSymptomReader.getSymptoms(arg);
     }
-
-    public void analyser() {    // Analyse des symptoms + tri + comptage des symptoms
+    /** Analyse des symptoms + tri + comptage des symptoms */
+    public void analyser() {
         IAnalyserDataSymptoms IAnalyserDataSymptoms = new AnalyserDataSymptoms();
         resultAnalyse = IAnalyserDataSymptoms.analyseSymptoms(resultReadSymptoms);
     }
-
-    public void writer() {      // Creation du fichier result.out avec l'analyse precedente.
+    /** Creation du fichier result.out avec l'analyse precedente. */
+    public void writer() {
         IWriterFile IWriterFile = new WriterDataToFile();
         boolean result = IWriterFile.writeFile(resultAnalyse);
 

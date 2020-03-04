@@ -17,7 +17,7 @@ public class Launcher {
     public static String fileout;
 
 
-    public static void main(String[] args) throws IOException, MesExceptions {
+    public static void main(String[] args) throws MesExceptions {
 
         fileout = args[1];
 
@@ -27,3 +27,4 @@ public class Launcher {
         analyticsCounter.writer();
     }
 }
+
