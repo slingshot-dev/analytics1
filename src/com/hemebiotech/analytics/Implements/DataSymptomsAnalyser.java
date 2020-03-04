@@ -1,8 +1,7 @@
 package com.hemebiotech.analytics.Implements;
 
-import com.hemebiotech.analytics.Interfaces.IAnalyserDataSymptoms;
+import com.hemebiotech.analytics.Interfaces.IDataSymptomsAnalyser;
 
-import javax.swing.*;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +16,7 @@ import java.util.stream.Collectors;
  * @return Map Table returned to Class Main with all Symptoms sorted.
  */
 
-public class AnalyserDataSymptoms implements IAnalyserDataSymptoms {
+public class DataSymptomsAnalyser implements IDataSymptomsAnalyser {
 
     @Override
     public Hashtable<String, Long> analyseSymptoms(List<String> resultReadSymptoms) {

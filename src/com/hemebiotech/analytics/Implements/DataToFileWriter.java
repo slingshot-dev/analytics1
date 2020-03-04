@@ -1,12 +1,9 @@
 package com.hemebiotech.analytics.Implements;
 
-import com.hemebiotech.analytics.Interfaces.IWriterFile;
-import com.hemebiotech.analytics.Launcher;
-
+import com.hemebiotech.analytics.Interfaces.IFileWriter;
 import java.io.FileWriter;
 import java.util.Hashtable;
 
-import static com.hemebiotech.analytics.Launcher.fileout;
 
 /**
  * Instantiating a fileWriter to create the result.out file
@@ -15,16 +12,16 @@ import static com.hemebiotech.analytics.Launcher.fileout;
  */
 
 
-public class WriterDataToFile implements IWriterFile {
+public class DataToFileWriter implements IFileWriter {
 
 
     @Override
-    public boolean writeFile(Hashtable<String, Long> resultAnalyse) {
+    public boolean writeFile(Hashtable<String, Long> resultAnalyse, String arg) {
 
         String line = "";
 
         try {
-            FileWriter writer = new FileWriter(fileout);
+            FileWriter writer = new FileWriter(arg);
 
             for (String key : resultAnalyse.keySet()) {
                 Long nombre = resultAnalyse.get(key);
@@ -37,7 +34,7 @@ public class WriterDataToFile implements IWriterFile {
             e.printStackTrace();
             return false;
         }
-        System.out.println("Fichier "+fileout+" créé avec succès");
+        System.out.println("Fichier "+arg+" créé avec succès");
         return true;
     }
 }

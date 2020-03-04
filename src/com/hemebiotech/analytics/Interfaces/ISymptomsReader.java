@@ -11,7 +11,7 @@ import java.util.List;
  * <p>
  * The implementation does not need to order the list
  */
-public interface ISymptomReader {
+public interface ISymptomsReader {
     /**
      * If no data is available, return an empty List
      */

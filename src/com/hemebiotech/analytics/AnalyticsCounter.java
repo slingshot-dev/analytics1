@@ -1,12 +1,9 @@
 package com.hemebiotech.analytics;
 
-import com.hemebiotech.analytics.Implements.AnalyserDataSymptoms;
-import com.hemebiotech.analytics.Implements.MesExceptions;
-import com.hemebiotech.analytics.Implements.ReaderSymptomDataFromFile;
-import com.hemebiotech.analytics.Implements.WriterDataToFile;
-import com.hemebiotech.analytics.Interfaces.ISymptomReader;
-import com.hemebiotech.analytics.Interfaces.IAnalyserDataSymptoms;
-import com.hemebiotech.analytics.Interfaces.IWriterFile;
+import com.hemebiotech.analytics.Implements.*;
+import com.hemebiotech.analytics.Interfaces.ISymptomsReader;
+import com.hemebiotech.analytics.Interfaces.IDataSymptomsAnalyser;
+import com.hemebiotech.analytics.Interfaces.IFileWriter;
 import java.util.Hashtable;
 import java.util.List;
 
@@ -25,29 +22,64 @@ public class AnalyticsCounter
 
 
 {
-    public static List<String> resultReadSymptoms;
-    public static Hashtable<String, Long> resultAnalyse;
+    public static List<String> listSymptoms;
+    public static Hashtable<String, Long> mapSymptoms;
 
-    /** Lecture du fichier pour extraire l'ensemble des symptoms avec gestion d'une exception en cas de fichier inexistant **/
-    public void reader(String arg) throws MesExceptions {
-        ISymptomReader iSymptomReader = new ReaderSymptomDataFromFile(); //
-        resultReadSymptoms = iSymptomReader.getSymptoms(arg);
+    /**
+     * Lecture du fichier pour extraire l'ensemble des symptoms avec gestion d'une exception en cas de fichier inexistant
+     */
+    public List<String> reader(String arg) throws MesExceptions {
+        ISymptomsReader iSymptomsReader = new SymptomsDataFromFileReader();
+        listSymptoms = iSymptomsReader.getSymptoms(arg);
+        return listSymptoms;
     }
-    /** Analyse des symptoms + tri + comptage des symptoms */
-    public void analyser() {
-        IAnalyserDataSymptoms IAnalyserDataSymptoms = new AnalyserDataSymptoms();
-        resultAnalyse = IAnalyserDataSymptoms.analyseSymptoms(resultReadSymptoms);
+
+    /**
+     * Analyse des symptoms + tri + comptage des symptoms
+     */
+    public Hashtable<String, Long> analyser(List<String> resultReadSymptoms) {
+        IDataSymptomsAnalyser IDataSymptomsAnalyser = new DataSymptomsAnalyser();
+        mapSymptoms = IDataSymptomsAnalyser.analyseSymptoms(resultReadSymptoms);
+        return mapSymptoms;
     }
-    /** Creation du fichier result.out avec l'analyse precedente. */
-    public void writer() {
-        IWriterFile IWriterFile = new WriterDataToFile();
-        boolean result = IWriterFile.writeFile(resultAnalyse);
+
+    /**
+     * Creation du fichier result.out avec l'analyse precedente.
+     */
+    public void writer(Hashtable<String, Long> h, String arg) {
+        IFileWriter IFileWriter = new DataToFileWriter();
+        boolean result = IFileWriter.writeFile(h, arg);
 
         if (!result) {
-            System.out.println("Probleme");
+            System.out.println("Probleme de création du Fichier de resultats");
         }
 
     }
+
+    /**
+     * Analyse de l'extension du fichier pour identifier si le fichier est traitable
+     * @param arg Arguments passé au lancement du programme
+     */
+
+    public void extAnalyser(String arg){
+        String ext = arg.substring(arg.lastIndexOf(".")); //récupère l'extention
+
+        ExtExtractor extExtractor = new ExtExtractor();
+        switch (ext){
+            case ".txt":
+                extExtractor.txtFile();
+                break;
+            case ".csv":
+                extExtractor.csvFile();
+                System.exit(1);
+                break;
+            default:
+                extExtractor.otherFile();
+                System.exit(1);
+        }
+
+    }
+
 }
 
 

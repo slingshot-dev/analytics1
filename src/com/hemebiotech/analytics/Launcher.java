@@ -1,8 +1,10 @@
 package com.hemebiotech.analytics;
 
+import com.hemebiotech.analytics.Implements.ExtExtractor;
 import com.hemebiotech.analytics.Implements.MesExceptions;
 
-import java.io.IOException;
+import java.util.Hashtable;
+import java.util.List;
 
 
 /**
@@ -14,17 +16,19 @@ import java.io.IOException;
 
 
 public class Launcher {
-    public static String fileout;
+
+    public static List<String> resultReadSymptoms;
+    public static Hashtable<String, Long> resultTriSymptoms;
 
 
     public static void main(String[] args) throws MesExceptions {
 
-        fileout = args[1];
-
         AnalyticsCounter analyticsCounter = new AnalyticsCounter();
-        analyticsCounter.reader(args[0]);
-        analyticsCounter.analyser();
-        analyticsCounter.writer();
+
+        analyticsCounter.extAnalyser(args[0]);
+        resultReadSymptoms = analyticsCounter.reader(args[0]);
+        resultTriSymptoms = analyticsCounter.analyser(resultReadSymptoms);
+        analyticsCounter.writer(resultTriSymptoms, args[1]);
     }
 }
 
