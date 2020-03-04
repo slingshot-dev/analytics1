@@ -6,12 +6,12 @@ Analyse d'un fichier Symptoms.txt fourni par les clients
 
 ## Pour commencer
 Instructions:
-- positionner le fichier symptoms.txt a la racine du projet
-- recuperer le fichier result.out a la racine du projet
+- positionner le fichier de symptoms a la racine du projet
+- recuperer le fichier resultats a la racine du projet
 
 ### Pré-requis
 
-Un fichier Symptoms est necessaire dans le repertoire du projet Analytics
+Un fichier texte, listant les Symptoms, est necessaire dans le repertoire du projet Analytics
 
 ### Installation
 
@@ -19,7 +19,7 @@ Deplacer le repertoire Analytics n'importe ou sur le Disque
 
 ## Démarrage
 
-dans un terminal, lancer la commande : java analytics.java
+dans un terminal, lancer la commande : java analytics.java <fichier symptoms> <fichier de resultat>
 
 ## Fabriqué avec
 
