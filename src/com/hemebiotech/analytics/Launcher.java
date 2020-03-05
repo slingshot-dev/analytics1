@@ -19,13 +19,17 @@ public class Launcher {
 
     public static List<String> resultReadSymptoms;
     public static Hashtable<String, Long> resultTriSymptoms;
+    public static String detectExt;
 
 
     public static void main(String[] args) throws MesExceptions {
 
         AnalyticsCounter analyticsCounter = new AnalyticsCounter();
 
-        analyticsCounter.extAnalyser(args[0]);
+        detectExt = analyticsCounter.extAnalyser(args[0]).detect();
+            System.out.println(detectExt);
+            if (!"Fichier .txt detecté. Ok pour traitement.".equals(detectExt)){System.exit(1);}
+                
         resultReadSymptoms = analyticsCounter.reader(args[0]);
         resultTriSymptoms = analyticsCounter.analyser(resultReadSymptoms);
         analyticsCounter.writer(resultTriSymptoms, args[1]);
