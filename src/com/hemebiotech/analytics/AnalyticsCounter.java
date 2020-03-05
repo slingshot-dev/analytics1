@@ -1,9 +1,8 @@
 package com.hemebiotech.analytics;
 
 import com.hemebiotech.analytics.Implements.*;
-import com.hemebiotech.analytics.Interfaces.ISymptomsReader;
-import com.hemebiotech.analytics.Interfaces.IDataSymptomsAnalyser;
-import com.hemebiotech.analytics.Interfaces.IFileWriter;
+import com.hemebiotech.analytics.Interfaces.*;
+
 import java.util.Hashtable;
 import java.util.List;
 
@@ -61,23 +60,20 @@ public class AnalyticsCounter
      * @param arg Arguments passé au lancement du programme
      */
 
-    public void extAnalyser(String arg){
+    public IextExtractor extAnalyser(String arg){
         String ext = arg.substring(arg.lastIndexOf(".")); //récupère l'extention
 
         ExtExtractor extExtractor = new ExtExtractor();
         switch (ext){
             case ".txt":
-                extExtractor.txtFile();
-                break;
-            case ".csv":
-                extExtractor.csvFile();
-                System.exit(1);
-                break;
-            default:
-                extExtractor.otherFile();
-                System.exit(1);
-        }
+                return new TxtDetector();
 
+            case ".csv":
+                return new CsvDetecter();
+
+            default:
+                return new OtherDetector();
+        }
     }
 
 }
