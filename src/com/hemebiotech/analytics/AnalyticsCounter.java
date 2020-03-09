@@ -2,7 +2,6 @@ package com.hemebiotech.analytics;
 
 import com.hemebiotech.analytics.Implements.*;
 import com.hemebiotech.analytics.Interfaces.*;
-
 import java.util.Hashtable;
 import java.util.List;
 
@@ -37,8 +36,8 @@ public class AnalyticsCounter
      * Analyse des symptoms + tri + comptage des symptoms
      */
     public Hashtable<String, Long> analyser(List<String> resultReadSymptoms) {
-        IDataSymptomsAnalyser IDataSymptomsAnalyser = new DataSymptomsAnalyser();
-        mapSymptoms = IDataSymptomsAnalyser.analyseSymptoms(resultReadSymptoms);
+        IDataSymptomsAnalyser iDataSymptomsAnalyser = new DataSymptomsAnalyser();
+        mapSymptoms = iDataSymptomsAnalyser.analyseSymptoms(resultReadSymptoms);
         return mapSymptoms;
     }
 
@@ -46,8 +45,8 @@ public class AnalyticsCounter
      * Creation du fichier result.out avec l'analyse precedente.
      */
     public void writer(Hashtable<String, Long> h, String arg) {
-        IFileWriter IFileWriter = new DataToFileWriter();
-        boolean result = IFileWriter.writeFile(h, arg);
+        IFileWriter iFileWriter = new DataToFileWriter();
+        boolean result = iFileWriter.writeFile(h, arg);
 
         if (!result) {
             System.out.println("Probleme de création du Fichier de resultats");

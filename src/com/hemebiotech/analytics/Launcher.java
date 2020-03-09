@@ -29,7 +29,7 @@ public class Launcher {
         detectExt = analyticsCounter.extAnalyser(args[0]).detect();
             System.out.println(detectExt);
             if (!"Fichier .txt detecté. Ok pour traitement.".equals(detectExt)){System.exit(1);}
-                
+
         resultReadSymptoms = analyticsCounter.reader(args[0]);
         resultTriSymptoms = analyticsCounter.analyser(resultReadSymptoms);
         analyticsCounter.writer(resultTriSymptoms, args[1]);
