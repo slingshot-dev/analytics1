@@ -19,7 +19,7 @@ Deplacer le repertoire Analytics n'importe ou sur le Disque
 
 ## Démarrage
 
-dans un terminal, lancer la commande : java analytics.java <fichier symptoms> <fichier de resultat>
+dans un terminal, lancer la commande : java -jar analytics1.jar <fichier symptoms> <fichier de resultat>
 
 ## Fabriqué avec
 
