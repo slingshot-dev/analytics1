@@ -6,9 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbe98df9-ab51-479b-ae40-da5d927e2d8d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="bbe98df9-ab51-479b-ae40-da5d927e2d8d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,6 +149,7 @@
       <workItem from="1583836733170" duration="3207000" />
       <workItem from="1583843433931" duration="607000" />
       <workItem from="1583915318081" duration="19993000" />
+      <workItem from="1584008463961" duration="387000" />
     </task>
     <task id="LOCAL-00001" summary="Modification interface, classe pour la gestion des extension de fichier.">
       <created>1583401169835</created>
