@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="analytics1:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="bbe98df9-ab51-479b-ae40-da5d927e2d8d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/analytics1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/AnalyticsCounter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/AnalyticsCounter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/Launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/analytics1/com/hemebiotech/analytics/Launcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results.out" beforeDir="false" afterPath="$PROJECT_DIR$/results.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/AnalyticsCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/AnalyticsCounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Implements/CsvDetecter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Implements/CsvDetecter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Implements/DataSymptomsAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Implements/DataSymptomsAnalyser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Implements/DataToFileWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Implements/DataToFileWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Implements/ExtExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Implements/ExtExtractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Implements/MesExceptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Implements/MesExceptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Implements/SymptomsDataFromFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Implements/SymptomsDataFromFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Implements/TxtDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Implements/TxtDetector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Interfaces/IDataSymptomsAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Interfaces/IDataSymptomsAnalyser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Interfaces/IFileWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Interfaces/IFileWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Interfaces/IextExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Interfaces/IextExtractor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/Launcher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +83,10 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../budget" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -136,7 +160,13 @@
       <workItem from="1583481670415" duration="1207000" />
       <workItem from="1583746329670" duration="2758000" />
       <workItem from="1583753930058" duration="1581000" />
-      <workItem from="1583768294403" duration="181000" />
+      <workItem from="1583768294403" duration="583000" />
+      <workItem from="1583768917698" duration="83000" />
+      <workItem from="1583769519880" duration="89000" />
+      <workItem from="1583833989301" duration="1095000" />
+      <workItem from="1583836733170" duration="3207000" />
+      <workItem from="1583843433931" duration="607000" />
+      <workItem from="1583915318081" duration="18069000" />
     </task>
     <task id="LOCAL-00001" summary="Modification interface, classe pour la gestion des extension de fichier.">
       <created>1583401169835</created>
@@ -171,11 +201,12 @@
     <option name="LAST_COMMIT_MESSAGE" value="Modification interface, classe pour la gestion des extension de fichier." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1243" y="190" width="598" height="649" key="#Launcher" timestamp="1583401089649">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="677" y="212" width="598" height="649" key="#Launcher" timestamp="1583917538905">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="-1243" y="190" key="#Launcher/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1583401089649" />
     <state x="677" y="190" key="#Launcher/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1582803323692" />
+    <state x="677" y="212" key="#Launcher/0.0.1920.1160@0.0.1920.1160" timestamp="1583917538905" />
     <state x="2597" y="317" width="598" height="649" key="#Launcher/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1583345872559" />
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582712737013">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -186,6 +217,10 @@
     </state>
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583397942909" />
     <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040/3840.0.1920.1040@1920.0.1920.1040" timestamp="1583396916206" />
+    <state x="622" y="213" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1583834034402">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="622" y="213" key="#com.intellij.ide.util.TreeClassChooserDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583834034402" />
     <state x="751" y="404" width="451" height="238" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1583398989497">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -200,108 +235,120 @@
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1582536664733" />
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1582795271084" />
+    <state x="707" y="312" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1583938734488">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="707" y="312" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1160@0.0.1920.1160" timestamp="1583938734488" />
     <state x="-1464" y="110" width="998" height="818" key="CommitChangelistDialog2" timestamp="1583401168349">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1464" y="110" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1583401168349" />
     <state x="2376" y="234" width="998" height="818" key="CommitChangelistDialog2/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1583346578603" />
-    <state x="740" y="334" key="FileChooserDialogImpl" timestamp="1582705000559">
+    <state x="740" y="334" key="FileChooserDialogImpl" timestamp="1583938698037">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="740" y="334" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1582705000559" />
-    <state width="1877" height="210" key="GridCell.Tab.0.bottom" timestamp="1583488078729">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="740" y="334" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1583938698037" />
+    <state width="1877" height="298" key="GridCell.Tab.0.bottom" timestamp="1584006064093">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="210" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583488078729" />
+    <state width="1877" height="221" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583835090310" />
     <state width="1557" height="348" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1582536869662" />
     <state width="1877" height="221" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1583401388417" />
-    <state width="1877" height="210" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583398557071" />
+    <state width="1877" height="221" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583768878153" />
     <state width="1877" height="193" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1582826706364" />
     <state width="1877" height="221" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583316488718" />
-    <state width="1877" height="221" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1583314811722" />
+    <state width="1877" height="298" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1584006064093" />
     <state width="939" height="217" key="GridCell.Tab.0.bottom/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1583346434506" />
-    <state width="1877" height="210" key="GridCell.Tab.0.center" timestamp="1583488078729">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="298" key="GridCell.Tab.0.center" timestamp="1584006064093">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="210" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583488078729" />
+    <state width="1877" height="221" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583835090310" />
     <state width="1557" height="348" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1582536869661" />
     <state width="1877" height="221" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1583401388417" />
-    <state width="1877" height="210" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583398557071" />
+    <state width="1877" height="221" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583768878153" />
     <state width="1877" height="193" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1582826706364" />
     <state width="1877" height="221" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583316488718" />
-    <state width="1877" height="221" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1583314811722" />
+    <state width="1877" height="298" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1584006064093" />
     <state width="939" height="217" key="GridCell.Tab.0.center/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1583346434506" />
-    <state width="1877" height="210" key="GridCell.Tab.0.left" timestamp="1583488078729">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="298" key="GridCell.Tab.0.left" timestamp="1584006064093">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="210" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583488078729" />
+    <state width="1877" height="221" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583835090310" />
     <state width="1557" height="348" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1582536869661" />
     <state width="1877" height="221" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1583401388417" />
-    <state width="1877" height="210" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583398557070" />
+    <state width="1877" height="221" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583768878153" />
     <state width="1877" height="193" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1582826706364" />
     <state width="1877" height="221" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583316488718" />
-    <state width="1877" height="221" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1583314811722" />
+    <state width="1877" height="298" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1584006064093" />
     <state width="939" height="217" key="GridCell.Tab.0.left/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1583346434506" />
-    <state width="1877" height="210" key="GridCell.Tab.0.right" timestamp="1583488078729">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="298" key="GridCell.Tab.0.right" timestamp="1584006064093">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="210" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583488078729" />
+    <state width="1877" height="221" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583835090310" />
     <state width="1557" height="348" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1582536869661" />
     <state width="1877" height="221" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1583401388417" />
-    <state width="1877" height="210" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583398557071" />
+    <state width="1877" height="221" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583768878153" />
     <state width="1877" height="193" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1582826706364" />
     <state width="1877" height="221" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583316488718" />
-    <state width="1877" height="221" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1583314811722" />
+    <state width="1877" height="298" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1584006064093" />
     <state width="939" height="217" key="GridCell.Tab.0.right/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1583346434506" />
-    <state width="1877" height="210" key="GridCell.Tab.1.bottom" timestamp="1583488078729">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="240" key="GridCell.Tab.1.bottom" timestamp="1584005397399">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state width="1877" height="210" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583488078729" />
     <state width="1557" height="348" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1582536869662" />
     <state width="1877" height="210" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1583401388415" />
     <state width="1877" height="210" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583398557336" />
     <state width="1877" height="210" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1582826706364" />
+    <state width="1877" height="240" key="GridCell.Tab.1.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1584005397399" />
     <state width="939" height="217" key="GridCell.Tab.1.bottom/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1583346434506" />
-    <state width="1877" height="210" key="GridCell.Tab.1.center" timestamp="1583488078729">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="240" key="GridCell.Tab.1.center" timestamp="1584005397399">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state width="1877" height="210" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583488078729" />
     <state width="1557" height="348" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1582536869662" />
     <state width="1877" height="210" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1583401388415" />
     <state width="1877" height="210" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583398557336" />
     <state width="1877" height="210" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1582826706364" />
+    <state width="1877" height="240" key="GridCell.Tab.1.center/0.0.1920.1160@0.0.1920.1160" timestamp="1584005397399" />
     <state width="939" height="217" key="GridCell.Tab.1.center/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1583346434506" />
-    <state width="1877" height="210" key="GridCell.Tab.1.left" timestamp="1583488078729">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="240" key="GridCell.Tab.1.left" timestamp="1584005397399">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state width="1877" height="210" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583488078729" />
     <state width="1557" height="348" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1582536869662" />
     <state width="1877" height="210" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1583401388415" />
     <state width="1877" height="210" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583398557336" />
     <state width="1877" height="210" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1582826706364" />
+    <state width="1877" height="240" key="GridCell.Tab.1.left/0.0.1920.1160@0.0.1920.1160" timestamp="1584005397399" />
     <state width="939" height="217" key="GridCell.Tab.1.left/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1583346434506" />
-    <state width="1877" height="210" key="GridCell.Tab.1.right" timestamp="1583488078729">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="240" key="GridCell.Tab.1.right" timestamp="1584005397399">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state width="1877" height="210" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583488078729" />
     <state width="1557" height="348" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1582536869662" />
     <state width="1877" height="210" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1583401388415" />
     <state width="1877" height="210" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583398557336" />
     <state width="1877" height="210" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1582826706364" />
+    <state width="1877" height="240" key="GridCell.Tab.1.right/0.0.1920.1160@0.0.1920.1160" timestamp="1584005397399" />
     <state width="939" height="217" key="GridCell.Tab.1.right/1920.120.1920.1080/0.0.1920.1173/3840.0.1920.1200@1920.120.1920.1080" timestamp="1583346434506" />
     <state x="672" y="235" key="MultipleFileMergeDialog" timestamp="1582196710676">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="235" key="MultipleFileMergeDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1582196710676" />
-    <state x="372" y="4" key="SettingsEditor" timestamp="1583318684859">
+    <state x="372" y="4" key="SettingsEditor" timestamp="1583834112284">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="372" y="4" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583834112284" />
+    <state x="372" y="4" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583768998857" />
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1582793155726" />
     <state x="372" y="4" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583318684859" />
-    <state x="-1368" y="280" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1583401177288">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="552" y="280" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1583769543636">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="552" y="280" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583769543636" />
     <state x="-1368" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1583401177288" />
+    <state x="552" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583768927267" />
     <state x="552" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1582813708292" />
     <state x="552" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1583329375935" />
     <state x="552" y="312" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1582704651698" />
@@ -314,19 +361,5 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040/3840.0.1920.1040@1920.0.1920.1040" timestamp="1583397249880" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/com/hemebiotech/analytics/Interfaces/IextExtractor.java</url>
-          <line>4</line>
-          <properties class="com.hemebiotech.analytics.Interfaces.IextExtractor" method="detect">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

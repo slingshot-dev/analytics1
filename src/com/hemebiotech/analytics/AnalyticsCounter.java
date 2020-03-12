@@ -2,8 +2,8 @@ package com.hemebiotech.analytics;
 
 import com.hemebiotech.analytics.Implements.*;
 import com.hemebiotech.analytics.Interfaces.*;
-import java.util.Hashtable;
 import java.util.List;
+import java.util.Map;
 
 /**
  * The program to Analyse Clients Symptoms from a file called symptoms.txt
@@ -21,7 +21,7 @@ public class AnalyticsCounter
 
 {
     public static List<String> listSymptoms;
-    public static Hashtable<String, Long> mapSymptoms;
+    public static Map<String, Long> mapSymptoms;
 
     /**
      * Lecture du fichier pour extraire l'ensemble des symptoms avec gestion d'une exception en cas de fichier inexistant
@@ -35,7 +35,7 @@ public class AnalyticsCounter
     /**
      * Analyse des symptoms + tri + comptage des symptoms
      */
-    public Hashtable<String, Long> analyser(List<String> resultReadSymptoms) {
+    public Map<String, Long> analyser(List<String> resultReadSymptoms) {
         IDataSymptomsAnalyser iDataSymptomsAnalyser = new DataSymptomsAnalyser();
         mapSymptoms = iDataSymptomsAnalyser.analyseSymptoms(resultReadSymptoms);
         return mapSymptoms;
@@ -44,7 +44,7 @@ public class AnalyticsCounter
     /**
      * Creation du fichier result.out avec l'analyse precedente.
      */
-    public void writer(Hashtable<String, Long> h, String arg) {
+    public void writer(Map<String, Long> h, String arg) {
         IFileWriter iFileWriter = new DataToFileWriter();
         boolean result = iFileWriter.writeFile(h, arg);
 

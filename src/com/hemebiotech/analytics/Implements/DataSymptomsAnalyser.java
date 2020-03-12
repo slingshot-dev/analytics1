@@ -1,10 +1,7 @@
 package com.hemebiotech.analytics.Implements;
 
 import com.hemebiotech.analytics.Interfaces.IDataSymptomsAnalyser;
-
-import java.util.Hashtable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -19,22 +16,21 @@ import java.util.stream.Collectors;
 public class DataSymptomsAnalyser implements IDataSymptomsAnalyser {
 
     @Override
-    public Hashtable<String, Long> analyseSymptoms(List<String> resultReadSymptoms) {
-
-        // instanciation du Tableau h pour insertion des valeur K, V de la Map
-        Hashtable<String, Long> h = new Hashtable<String, Long>();
+    public Map<String, Long> analyseSymptoms(List<String> resultReadSymptoms) {
 
         // instanciation d'une Map pour grouper et comptabiliser les symptoms
         Map<String, Long> counts = resultReadSymptoms.stream().collect(Collectors.groupingBy(e -> e, Collectors.counting())); // utilisation de Lambda
 
-        // insertion des données dans le HashTable h
-        for (String key : counts.keySet()) {
-            Long nombre = counts.get(key);
-            /*System.out.println("[" + key + "] --> " + nombre);*/
 
-            h.put(key, nombre);
+        Map<String, Long> map = new TreeMap<String, Long>(counts);
+        Set set = map.entrySet();
+        Iterator it = set.iterator();
+        while(it.hasNext()) {
+            Map.Entry entry = (Map.Entry) it.next();
+            //System.out.println(entry.getKey() + ": " + entry.getValue());
         }
+
         System.out.println("Fichier analysé avec succès, " + resultReadSymptoms.size() + " symptoms identifiés et analysés");
-        return h;
+        return map;
     }
 }

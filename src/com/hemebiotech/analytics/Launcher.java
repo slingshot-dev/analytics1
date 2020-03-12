@@ -1,10 +1,8 @@
 package com.hemebiotech.analytics;
 
-import com.hemebiotech.analytics.Implements.ExtExtractor;
 import com.hemebiotech.analytics.Implements.MesExceptions;
-
-import java.util.Hashtable;
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -18,7 +16,7 @@ import java.util.List;
 public class Launcher {
 
     public static List<String> resultReadSymptoms;
-    public static Hashtable<String, Long> resultTriSymptoms;
+    public static Map<String, Long> resultTriSymptoms;
     public static String detectExt;
 
 
@@ -28,7 +26,7 @@ public class Launcher {
 
         detectExt = analyticsCounter.extAnalyser(args[0]).detect();
             System.out.println(detectExt);
-            if (!"Fichier .txt detecté. Ok pour traitement.".equals(detectExt)){System.exit(1);}
+            if (!"Extension .txt detectée. Ok pour traitement.".equals(detectExt)){System.exit(1);}
 
         resultReadSymptoms = analyticsCounter.reader(args[0]);
         resultTriSymptoms = analyticsCounter.analyser(resultReadSymptoms);

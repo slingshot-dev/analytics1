@@ -2,7 +2,7 @@ package com.hemebiotech.analytics.Implements;
 
 import com.hemebiotech.analytics.Interfaces.IFileWriter;
 import java.io.FileWriter;
-import java.util.Hashtable;
+import java.util.Map;
 
 
 /**
@@ -16,7 +16,7 @@ public class DataToFileWriter implements IFileWriter {
 
 
     @Override
-    public boolean writeFile(Hashtable<String, Long> resultAnalyse, String arg) {
+    public boolean writeFile(Map<String, Long> resultAnalyse, String arg) {
 
         String line = "";
 

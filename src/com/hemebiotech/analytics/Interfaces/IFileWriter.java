@@ -1,6 +1,6 @@
 package com.hemebiotech.analytics.Interfaces;
 
-import java.util.Hashtable;
+import java.util.Map;
 
 /**
  * Interface to write the output file
@@ -9,5 +9,5 @@ import java.util.Hashtable;
  */
 
 public interface IFileWriter {
-    boolean writeFile(Hashtable<String, Long> result3, String arg);
+    boolean writeFile(Map<String, Long> result3, String arg);
 }

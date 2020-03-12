@@ -5,6 +5,6 @@ import com.hemebiotech.analytics.Interfaces.IextExtractor;
 public class TxtDetector implements IextExtractor {
     @Override
     public String detect() {
-        return "Fichier .txt detecté. Ok pour traitement.";
+        return "Extension .txt detectée. Ok pour traitement.";
     }
 }
