@@ -14,8 +14,7 @@ Instructions:
 Un fichier texte, listant les Symptoms, est necessaire dans le repertoire du projet Analytics
 
 ### Installation
-
-Deplacer le repertoire Analytics n'importe ou sur le Disque
+deplacer le repertoire "analytics1/out/artifacts/analytics1_jar/" n'importe ou sur le disque
 
 ## Démarrage
 
