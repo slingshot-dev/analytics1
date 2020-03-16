@@ -1,6 +1,7 @@
 package com.hemebiotech.analytics.Implements;
 
 import com.hemebiotech.analytics.Interfaces.IDataSymptomsAnalyser;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -21,14 +22,7 @@ public class DataSymptomsAnalyser implements IDataSymptomsAnalyser {
         // instanciation d'une Map pour grouper et comptabiliser les symptoms
         Map<String, Long> counts = resultReadSymptoms.stream().collect(Collectors.groupingBy(e -> e, Collectors.counting())); // utilisation de Lambda
 
-
         Map<String, Long> map = new TreeMap<String, Long>(counts);
-        Set set = map.entrySet();
-        Iterator it = set.iterator();
-        while(it.hasNext()) {
-            Map.Entry entry = (Map.Entry) it.next();
-            //System.out.println(entry.getKey() + ": " + entry.getValue());
-        }
 
         System.out.println("Fichier analysé avec succès, " + resultReadSymptoms.size() + " symptoms identifiés et analysés");
         return map;

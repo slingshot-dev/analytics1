@@ -2,6 +2,8 @@ package com.hemebiotech.analytics.Interfaces;
 
 import com.hemebiotech.analytics.Implements.MesExceptions;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -15,6 +17,6 @@ public interface ISymptomsReader {
     /**
      * If no data is available, return an empty List
      */
-    List<String> getSymptoms(String filepath) throws MesExceptions;
+    List<String> getSymptoms(String filepath) throws MesExceptions, IOException;
 }
 

@@ -1,6 +1,8 @@
 package com.hemebiotech.analytics;
 
 import com.hemebiotech.analytics.Implements.MesExceptions;
+
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -20,17 +22,19 @@ public class Launcher {
     public static String detectExt;
 
 
-    public static void main(String[] args) throws MesExceptions {
+    public static void main(String[] args) throws MesExceptions, IOException {
+
+        String verifExt = "Ok pour traitement";
 
         AnalyticsCounter analyticsCounter = new AnalyticsCounter();
 
-        detectExt = analyticsCounter.extAnalyser(args[0]).detect();
+        detectExt = analyticsCounter.extAnalyse(args[0]).detect();
             System.out.println(detectExt);
-            if (!"Extension .txt detectée. Ok pour traitement.".equals(detectExt)){System.exit(1);}
+            if (!(detectExt).contains(verifExt)){System.exit(1);}
 
-        resultReadSymptoms = analyticsCounter.reader(args[0]);
-        resultTriSymptoms = analyticsCounter.analyser(resultReadSymptoms);
-        analyticsCounter.writer(resultTriSymptoms, args[1]);
+        resultReadSymptoms = analyticsCounter.read(args[0]);
+        resultTriSymptoms = analyticsCounter.analyse(resultReadSymptoms);
+        analyticsCounter.write(resultTriSymptoms, args[1]);
     }
 }
 

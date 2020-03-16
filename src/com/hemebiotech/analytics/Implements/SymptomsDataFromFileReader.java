@@ -1,7 +1,9 @@
 package com.hemebiotech.analytics.Implements;
 
 import com.hemebiotech.analytics.Interfaces.ISymptomsReader;
+
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -18,21 +20,18 @@ public class SymptomsDataFromFileReader implements ISymptomsReader {
      */
 
     @Override
-    public List<String> getSymptoms(String filepath) {
+    public List<String> getSymptoms(String filepath) throws IOException {
         ArrayList<String> result = new ArrayList<String>();
 
         if (filepath != null) {
+            BufferedReader reader = new BufferedReader(new FileReader(filepath));
+
             try {
-                BufferedReader reader = new BufferedReader(new FileReader(filepath));
+
                 String line = reader.readLine();
 
                 if (line == null) {
-                    try {
-                        throw new MesExceptions("Fichier " + filepath + " vide");
-                    } catch (MesExceptions e) {
-                        System.exit(1);
-                    }
-
+                    throw new MesExceptions("Fichier " + filepath + " vide");
                 }
 
                 while (line != null) {
@@ -40,9 +39,11 @@ public class SymptomsDataFromFileReader implements ISymptomsReader {
                     line = reader.readLine();
                 }
                 reader.close();
-            } catch (IOException e) {
+            } catch (IOException | MesExceptions e) {
                 System.err.println("Fichier " + filepath + " introuvable");
                 System.exit(1);
+            } finally {
+                reader.close();
             }
         }
         System.out.println("Fichier Symptoms.txt lu avec succès");

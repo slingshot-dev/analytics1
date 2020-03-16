@@ -2,6 +2,8 @@ package com.hemebiotech.analytics;
 
 import com.hemebiotech.analytics.Implements.*;
 import com.hemebiotech.analytics.Interfaces.*;
+
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -26,7 +28,7 @@ public class AnalyticsCounter
     /**
      * Lecture du fichier pour extraire l'ensemble des symptoms avec gestion d'une exception en cas de fichier inexistant
      */
-    public List<String> reader(String arg) throws MesExceptions {
+    public List<String> read(String arg) throws MesExceptions, IOException {
         ISymptomsReader iSymptomsReader = new SymptomsDataFromFileReader();
         listSymptoms = iSymptomsReader.getSymptoms(arg);
         return listSymptoms;
@@ -35,7 +37,7 @@ public class AnalyticsCounter
     /**
      * Analyse des symptoms + tri + comptage des symptoms
      */
-    public Map<String, Long> analyser(List<String> resultReadSymptoms) {
+    public Map<String, Long> analyse(List<String> resultReadSymptoms) {
         IDataSymptomsAnalyser iDataSymptomsAnalyser = new DataSymptomsAnalyser();
         mapSymptoms = iDataSymptomsAnalyser.analyseSymptoms(resultReadSymptoms);
         return mapSymptoms;
@@ -44,7 +46,7 @@ public class AnalyticsCounter
     /**
      * Creation du fichier result.out avec l'analyse precedente.
      */
-    public void writer(Map<String, Long> h, String arg) {
+    public void write(Map<String, Long> h, String arg) {
         IFileWriter iFileWriter = new DataToFileWriter();
         boolean result = iFileWriter.writeFile(h, arg);
 
@@ -59,10 +61,10 @@ public class AnalyticsCounter
      * @param arg Arguments passé au lancement du programme
      */
 
-    public IextExtractor extAnalyser(String arg){
+    public IextExtractor extAnalyse(String arg){
         String ext = arg.substring(arg.lastIndexOf(".")); //récupère l'extention
 
-        ExtExtractor extExtractor = new ExtExtractor();
+
         switch (ext){
             case ".txt":
                 return new TxtDetector();
